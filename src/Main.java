@@ -7,6 +7,7 @@ public class Main {
         int numero2;
         ArrayList<String> lista1 = new ArrayList<>();
         ArrayList<String> lista2 = new ArrayList<>();
+        ArrayList<String> listafinal = new ArrayList<>();
         Scanner stdin = new java.util.Scanner(System.in);
 
         numero1 = stdin.nextInt();
@@ -18,6 +19,11 @@ public class Main {
         for(int i =0; i< numero2;i++){
             lista2.add(stdin.next());
         }
+
+        CriaLista a = new CriaLista();
+        listafinal =a.encontraMaiorSequencia(lista1, lista2);
+        System.out.println( listafinal.size());
+        System.out.println(listafinal );
 
         
         /*array oficial final e array teste

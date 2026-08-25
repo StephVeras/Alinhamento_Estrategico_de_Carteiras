@@ -14,7 +14,7 @@ public class CriaLista {
 
                 for(int j= indice2; j<lista2.size(); j++){
 
-                    if(lista1.get(i) == lista2.get(j)){
+                    if(lista1.get(i).equals(lista2.get(j))){
                         indice2 = j;
                         i++;
                         listaTeste.add(lista2.get(j));
@@ -25,9 +25,12 @@ public class CriaLista {
             }
 
             if(listaTeste.size() >= listaOficial.size()){
-                listaOficial = listaTeste;
+                //listaOficial = listaTeste;
+                listaOficial.clear();
+                listaOficial.addAll(listaTeste);
             }
-            
+            listaTeste.clear();
+
         }
 
         return this.listaOficial;
