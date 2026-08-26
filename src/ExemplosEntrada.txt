@@ -9,3 +9,5 @@ RENT3 WEGE3 MGLU3 BBAS3
 6 6
 PETR4 VALE3 ITUB4 BBDC4 ABEV3 WEGE3
 VALE3 PETR4 BBDC4 ITUB4 WEGE3 ABEV3
+
+//If adicionado para resolver outofbound e precisa formatar resposta, fazer readme e confirmar parÂmetros de entrega; calcular complexidade
