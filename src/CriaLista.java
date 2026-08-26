@@ -9,22 +9,27 @@ public class CriaLista {
         
         for(int k=0; k<lista1.size(); k++){
             int indice2 = 0;
+            System.out.println("Loop k " + k);
 
             for(int i = k; i< lista1.size(); i++){
-
+                System.out.println("Loop i " + i);
+                
                 for(int j= indice2; j<lista2.size(); j++){
-
-                    if(lista1.get(i).equals(lista2.get(j))){
+                    System.out.println("Loop j " + j);
+                    
+                    if(i< lista1.size() && lista1.get(i).equals(lista2.get(j))){
+                        System.out.println("entrou no if");
                         indice2 = j;
                         i++;
                         listaTeste.add(lista2.get(j));
+                        System.out.println("indice novo do i " + i);
                     }
 
                 }
 
             }
 
-            if(listaTeste.size() >= listaOficial.size()){
+            if(listaTeste.size() > listaOficial.size()){
                 //listaOficial = listaTeste;
                 listaOficial.clear();
                 listaOficial.addAll(listaTeste);
