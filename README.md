@@ -6,7 +6,7 @@
 
 Projeto para a elaboração de um algoritmo capaz de obter a quantidade máxima de ativos da estratégia de consenso de 2 ou mais instituições e a sequência destes.
 
-O algoritmo desenvolvido apresenta uma resolução M²x N, sendo M e N o tamanho das entradas. Sua complexidade é: n³.
+O algoritmo desenvolvido apresenta uma resolução M²x N, sendo M e N o tamanho das entradas. Sua complexidade é: O(n³) //verificar.
 O código percorre os dois vetores através de 2 loops e procura elementos iguais. Quando acha, ele incrementa a variável do loop externo e só continua o loop de dentro a partir daquele valor salvo (Achando assim a sequencia)
 Para procurar mais sequências ele possui mais um loop, externo a esses dois, percorrendo novamente o array externo, para que cubra todaws as possibilidades
 
