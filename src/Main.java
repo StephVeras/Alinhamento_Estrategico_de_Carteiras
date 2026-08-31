@@ -1,13 +1,19 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         int numero1;
         int numero2;
+
         ArrayList<String> lista1 = new ArrayList<>();
         ArrayList<String> lista2 = new ArrayList<>();
-        ArrayList<String> listafinal = new ArrayList<>();
+        
+        ArrayList<String> listaTeste = new ArrayList<>();
+        ArrayList<String> listaOficial = new ArrayList<>();
+
+        ////////////// SCANNER ///////////////////////////////////////
+        
         Scanner stdin = new java.util.Scanner(System.in);
 
         numero1 = stdin.nextInt();
@@ -20,17 +26,37 @@ public class Main {
             lista2.add(stdin.next());
         }
 
-        CriaLista a = new CriaLista();
-        listafinal =a.encontraMaiorSequencia(lista1, lista2);
-        System.out.println( listafinal.size());
-        System.out.println(listafinal );
-
+        /////////////// ALGORITMO //////////////////////////////////////////////////
         
-        /*array oficial final e array teste
-        faz no array teste, pegando o elemento e comparando com os da outra lista
-        quando encontra elemento igual adiciona eno teste, e vai adicionando conforme vai achando.
-        Se for maior do que está no oficial substitui
-         */
+        for(int k=0; k<lista1.size(); k++){
+            int indice2 = 0;
+
+            for(int i = k; i< lista1.size(); i++){
+                
+                for(int j= indice2; j<lista2.size(); j++){
+                    
+                    if(i< lista1.size() && lista1.get(i).equals(lista2.get(j))){
+                        indice2 = j;
+                        i++;
+                        listaTeste.add(lista2.get(j));
+                    }
+
+                }
+
+            }
+
+            if(listaTeste.size() > listaOficial.size()){
+                listaOficial.clear();
+                listaOficial.addAll(listaTeste);
+            }
+            listaTeste.clear();
+
+        }
+
+        /////////////////////////////////////////////////////////////////////////////
+        
+        System.out.println( listaOficial.size());
+        System.out.println(String.join(" ", listaOficial));
 
 
     }
