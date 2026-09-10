@@ -36,7 +36,7 @@ public class Main {
                 for(int j= indice2; j<lista2.size(); j++){
                     
                     if(i< lista1.size() && lista1.get(i).equals(lista2.get(j))){
-                        indice2 = j;
+                        indice2 = j +1;
                         i++;
                         listaTeste.add(lista2.get(j));
                     }
