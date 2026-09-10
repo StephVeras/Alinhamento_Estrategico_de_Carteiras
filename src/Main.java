@@ -33,12 +33,39 @@ public class Main {
 
             for(int i = k; i< lista1.size(); i++){
                 
+                
                 for(int j= indice2; j<lista2.size(); j++){
                     
                     if(i< lista1.size() && lista1.get(i).equals(lista2.get(j))){
                         indice2 = j +1;
                         i++;
                         listaTeste.add(lista2.get(j));
+                    }
+
+                }
+
+            }
+
+            if(listaTeste.size() > listaOficial.size()){
+                listaOficial.clear();
+                listaOficial.addAll(listaTeste);
+            }
+            listaTeste.clear();
+
+        }
+
+        for(int k=0; k<lista2.size(); k++){
+            int indice2 = 0;
+
+            for(int i = k; i< lista2.size(); i++){
+                
+                
+                for(int j= indice2; j<lista1.size(); j++){
+                    
+                    if(i< lista2.size() && lista2.get(i).equals(lista1.get(j))){
+                        indice2 = j +1;
+                        i++;
+                        listaTeste.add(lista1.get(j));
                     }
 
                 }
