@@ -32,7 +32,7 @@ A complexidade ficou grande demais, por isso foi pensado algumas melhorias que p
 
 Foi utilizada IA para gerar casos de testes maiores e mais desordenados (o problema foi explicado e os casos de testes seguiram as orientações recomendadas, todos realizados a mão posteriormente). Entretanto, a soluçaõ não foi como esperado nestes testes,segue o exemplo de falha abaixo:
 
-//////////////////////////
+```
 
 Entrada:
 7 8
@@ -51,7 +51,7 @@ Explicação:
 Quando o algoritmo encontra c após ter encontrado b ele não volta e analisa as outras possibilidades com inicio em b
 isso para cada termo encontrado
 
-//////////////////////////
+```
 
 Concluiu-se, portanto, que a solução não abrange todas as possibilidades.
 
@@ -104,3 +104,11 @@ Ta nas tuas mãos, Senhor. Obrigada por me iluminar até aqui. Eu vos amo e só 
 Confio na tua divina providência e entrego novamene este projeto a Vos, por meio de Maria, nossa mãezinha querida
 Que o Senhor possa me iluminar para bem fazer esse trabalho da melhor forma possível, sem usar métodos errados e quebrando meu orgulho de fazer sozinha
 Amém
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Continuação pós entrega do trabalho:
+* mudança na condicional que chama a recursão. Quando tiver 1 elemento apaga e encerra ciclo.
+* FUNCIONOOOU, mas pra entradas grandes como 100x100 deu algum erro ainda não identificado:
+```
+at Teste.loopJ(Teste.java:68)
+```
