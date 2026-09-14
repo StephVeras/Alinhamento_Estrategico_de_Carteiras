@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -9,6 +10,7 @@ public class Main {
         int numero2;
         ArrayList<String> lista1 = new ArrayList<>();
         ArrayList<String> lista2 = new ArrayList<>();
+        ArrayList<String> listaOficial = new ArrayList<>();
         
 
         ////////////// SCANNER ///////////////////////////////////////
@@ -26,8 +28,10 @@ public class Main {
         }
 
         /////////////// ALGORITMO //////////////////////////////////////////////////
-        Teste teste = new Teste( lista1, lista2);
-        System.out.println(teste.recursivo());
+        Teste teste = new Teste(lista1, lista2);
+        listaOficial.addAll(teste.recursivo());
+        System.out.println(listaOficial.size());
+        System.out.println(listaOficial.stream().collect(Collectors.joining(" ")));
 
     }
 }

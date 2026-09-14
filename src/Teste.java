@@ -67,6 +67,9 @@ public  class Teste {
                 if(indiceLista1.size()>1){
                     loopJ(indiceLista1.getLast()+1);
                     
+                }else{
+                    indiceLista1.clear();
+                    indiceLista2.clear();
                 }
         }
 
